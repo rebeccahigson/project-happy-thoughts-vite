@@ -1,3 +1,10 @@
+import { Thoughts } from "./assets/Components/Thoughts";
 export const App = () => {
-  return <div>Find me in src/app.jsx!</div>;
+  return (
+  <main>
+    <section className="container">
+      <Thoughts />
+    </section>
+    </main>
+  );
 };
