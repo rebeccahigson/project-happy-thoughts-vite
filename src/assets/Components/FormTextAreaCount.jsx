@@ -5,14 +5,14 @@ export const FormTextAreaCount = ({ newThought, onNewThoughtChange }) => {
 
   const reCalculate = (e) => {
     setTextAreaCount(e.target.value.length);
-    onNewThoughtChange(e); // Call the original onChange handler to update newThought
+    onNewThoughtChange(e); 
   };
 
   return (
     <div>
       <textarea
         type="text"
-        rows={3} // Use "rows" instead of "row"
+        rows={3}
         value={newThought}
         onChange={reCalculate}
         maxLength={140}

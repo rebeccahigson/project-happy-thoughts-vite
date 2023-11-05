@@ -1,46 +1,100 @@
 .container{
-    width:55%;
+    width:60%;
     margin:auto;
     display:flex;
     justify-content: center;
 }
-.thoughtContainer{
-    width:60%;
+
+.thought-container{
+    width:95%;
 }
-.thoughtContainer h4{
+.thought-container h4{
     font-weight:normal;
 }
-.thoughtContainer,
-.thoughtsFormContainer{
+.thought-container,
+.thought-formContainer{
     border:1px solid #000;
     margin-bottom:20px;
     padding:20px;
     box-shadow: 10px 10px 0px 0 #000;
 }
-.thoughtsFormContainer{
-    width:65%;
+.thought-formContainer{
+    width:100%;
 }
-.thoughtsFormContainer{
+.thought-formContainer{
     background-color:#ebebeb;
 }
-.thoughtsFormContainer textarea{
+.thought-formContainer textarea{
  width:100%;
  min-height:50px;
  margin:10px 0 0px 0;
 }
-.thoughtsFormButton{
+
+/*-- BUTTONS -------------*/
+.thought-formButton{
     border-radius:50px;
     background-color:#ffb7d2;
     padding: 5px 10px;
     border:0px;
     font-size:18px;
 }
-.thoughtsFormButton:hover{
-    opacity:0.85;
+.thought-formButton:hover,
+.thought-likesButton:hover{
+    background-color:rgb(255, 199, 220);
+    cursor: pointer;
 }
+.thought-likesButton{
+    background-color:#d1d1d1;
+    padding:10px;
+    border-radius:50px;
+    border:0px;
+    margin-right:10px;
+}
+
+
+
+
+.thought-informationContainer{
+    display:flex;
+}
+
+.thought-likes{
+
+}
+
+.thought-createdAt{
+
+}
+
+
+
+
+
+
+
+
+/*--- LIKE SECTION  -----------*/
+
 .heart{
     font-size:24px;
 }
+.pulse{
+    -webkit-animation: pulse 1.5s infinite;
+}
+
+@-webkit-keyframes pulse {
+    0% {
+      @include transform(scale(.9));
+    }
+    70% {
+      @include transform(scale(1));
+      box-shadow: 0 0 0 3px #d1d1d1;
+    }
+      100% {
+      @include transform(scale(.9));
+      box-shadow: 0 0 0 0 #d1d1d1;
+    }
+  }
 .textareaWordCount{
     color:gray;
     text-align:right;

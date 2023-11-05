@@ -27,12 +27,12 @@ export const Thoughts = () => {
   };
 
 
-  const handleNewThoughtChange = (event) => {
-    setNewThought(event.target.value);
+  const handleNewThoughtChange = (e) => {
+    setNewThought(e.target.value);
   };
 
-  const onFormSubmit = async (event) => {
-    event.preventDefault();
+  const onFormSubmit = async (e) => {
+    e.preventDefault();
 
     const options = {
       method: "POST",
@@ -73,6 +73,7 @@ export const Thoughts = () => {
         loading = {loading}
         thoughtsList = {thoughtsList}
         setThoughtsList = {setThoughtsList}
+        
         />
     </div>
   );
