@@ -1,8 +1,8 @@
-import { Thoughts } from "./assets/Components/Thoughts";
+import { Thoughts } from "./Components/Thoughts";
 export const App = () => {
   return (
   <main>
-    <section className="container">
+    <section>
       <Thoughts />
     </section>
     </main>

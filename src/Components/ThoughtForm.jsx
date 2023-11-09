@@ -8,7 +8,6 @@ export const ThoughtForm = ({newThought, onNewThoughtChange, onFormSubmit}) => {
     onNewThoughtChange(e); 
   };
 
-
   return (
     <form onSubmit = {onFormSubmit} className="thought-formContainer">
         <h1>What is making you happy right now?</h1>
@@ -16,6 +15,7 @@ export const ThoughtForm = ({newThought, onNewThoughtChange, onFormSubmit}) => {
         {/* Textarea with word count */}
         <textarea
         type="text"
+        wrap="soft"
         rows={3}
         value={newThought}
         onChange={reCalculate}

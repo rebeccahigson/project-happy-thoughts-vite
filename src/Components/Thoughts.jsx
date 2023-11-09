@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react"
 import { ThoughtList } from "./ThoughtList"
 import { ThoughtForm } from "./ThoughtForm"
+import "./Thoughts.css";
 
 export const Thoughts = () => {
   const [loading, setLoading] = useState(false);
@@ -30,6 +31,7 @@ export const Thoughts = () => {
   const handleNewThoughtChange = (e) => {
     setNewThought(e.target.value);
   };
+
 
   const onFormSubmit = async (e) => {
     e.preventDefault();
@@ -62,8 +64,9 @@ export const Thoughts = () => {
     fetchThoughts();
   }, []);
 
+
   return (
-    <div>
+    <div className="container">
         <ThoughtForm
         newThought = {newThought}
         onNewThoughtChange = {handleNewThoughtChange}

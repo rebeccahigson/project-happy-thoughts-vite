@@ -1,21 +1,19 @@
-import "./Thoughts.css";
 
 import { formatRelative } from "date-fns";
 import { LikeButton } from "./LikeButton";
 
 export const ThoughtList = ({ loading, thoughtsList, handleLike }) => {
   if (loading) {
-    return <h1>Loading in progress...</h1>;
+    return <h1>Loading happy thought...</h1>;
   }
 
   return (
-    <section>
+    <section className="thought-container">
       {thoughtsList.map((thought) => (
-        <div key={thought._id} className="thought-container">
+        <div key={thought._id} className="thought">
           <h4>{thought.message}</h4>
 
           <div className="thought-informationContainer">
-
             {/* Like button */}
             <LikeButton 
             thoughtId={thought._id} 
