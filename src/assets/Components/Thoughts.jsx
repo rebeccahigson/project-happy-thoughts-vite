@@ -45,6 +45,7 @@ export const Thoughts = () => {
       }),
     };
 
+    
     try {
       const res = await fetch(url, options);
       if (res.ok) {
@@ -72,8 +73,6 @@ export const Thoughts = () => {
         <ThoughtList 
         loading = {loading}
         thoughtsList = {thoughtsList}
-        setThoughtsList = {setThoughtsList}
-        
         />
     </div>
   );
