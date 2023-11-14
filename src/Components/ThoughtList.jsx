@@ -1,5 +1,5 @@
 
-import { formatRelative } from "date-fns";
+import { format, formatDistance, formatRelative, subDays } from 'date-fns'
 import { LikeButton } from "./LikeButton";
 
 export const ThoughtList = ({ loading, thoughtsList, handleLike }) => {
@@ -22,7 +22,10 @@ export const ThoughtList = ({ loading, thoughtsList, handleLike }) => {
             />
 
             {/* Date published */}
-            <p className="thought-createdAt">{formatRelative(new Date(thought.createdAt), new Date())}</p>
+            <p className="thought-createdAt">
+              {formatDistance(new Date(thought.createdAt), new Date(), { addSuffix: true })}
+            </p>
+          
           </div>
         </div>
       ))
